@@ -488,6 +488,7 @@ input::-webkit-inner-spin-button {
   display: flex;
   flex-direction: column;
   gap: 165px;
+  position: relative;
 }
 .banner::before {
   content: "";

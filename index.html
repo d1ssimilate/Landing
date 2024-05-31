@@ -14,6 +14,69 @@
   </head>
   <body>
     <div class="page-container">
+      <header class="header">
+        <div class="header__content">
+          <div class="header__logo">
+            <img src="assets/img/logo.png" alt="logo" />
+          </div>
+          <ul class="header__nav">
+            <li class="header__nav-item">
+              <span>Market</span><img src="/assets/img/arrow.svg" alt="" />
+            </li>
+            <li class="header__nav-item">
+              <span>Trade</span><img src="/assets/img/arrow.svg" alt="" />
+            </li>
+            <li class="header__nav-item">
+              <span>Earn</span><img src="/assets/img/arrow.svg" alt="" />
+            </li>
+            <li class="header__nav-item">
+              <span>About</span>
+            </li>
+            <li class="header__nav-item">
+              <span>Career</span>
+            </li>
+          </ul>
+          <div class="header__end">
+            <button class="header__logIn" id="loginBtn">Log In</button>
+            <img class="header__menuIcon" src="/assets/icons/Menu.svg" alt="" />
+          </div>
+        </div>
+      </header>
+      <div id="myModal" class="modal">
+        <div class="modal__inner">
+          <div class="modal__content">
+            <p class="modal__title">Login</p>
+            <form class="modal__form">
+              <div class="modal__input">
+                <label for="email">Email or Phone</label>
+                <input placeholder="Type Here" name="email" type="text" />
+              </div>
+              <div class="modal__input">
+                <label for="password">Password</label>
+                <input
+                  placeholder="Type Here"
+                  name="password"
+                  type="password"
+                  id="password"
+                />
+                <img
+                  id="eye"
+                  class="modal__input-show"
+                  src="/assets/icons/CloseEye.svg"
+                  alt="show"
+                />
+              </div>
+              <div class="modal__actions">
+                <button type="submit">Login</button>
+                <span>Forgot Password?</span>
+              </div>
+              <p class="modal__register">
+                Don’t Have an Account?<span> Sign Up Here</span>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
       <div class="banner">
         <div class="banner__content">
           <div class="banner__content-text">
@@ -123,7 +186,199 @@
           <hr class="vertical" />
         </ul>
       </div>
+      <div id="tab-1" class="market">
+        <div class="market__head">
+          <h2>Market Trends</h2>
+          <div class="market__tabs">
+            <button
+              type="button"
+              class="market__tabs-item market__tabs-item--active"
+              data-target-id="0"
+            >
+              All
+            </button>
+            <button type="button" class="market__tabs-item" data-target-id="1">
+              Top Gainers
+            </button>
+            <button type="button" class="market__tabs-item" data-target-id="2">
+              Top Losers
+            </button>
+          </div>
+        </div>
+        <hr />
+        <div class="market__coins market__coins-show" data-id="0">
+          <div class="market__coin">
+            <img src="/assets/icons/coins/BTC.png" />
+            <span class="market__coin-name">Bitcoin / BTC</span>
+            <div class="market__coin-stat market__coin-stat--top">
+              <img src="/assets/icons/ArrowTop.svg" /> 5.76%
+            </div>
+            <span class="market__coin-value">₹ 28,214,25.341</span>
+            <img src="/assets/icons/coins/graph/BTC.png" />
+          </div>
+          <div class="market__coin">
+            <img src="/assets/icons/coins/BTS.png" />
+            <span class="market__coin-name">BTS / BTC</span>
+            <div class="market__coin-stat">
+              <img src="/assets/icons/ArrowBottom.svg" /> 5.76%
+            </div>
+            <span class="market__coin-value">₹ 2,541.12</span>
+            <img src="/assets/icons/coins/graph/BTS.png" />
+          </div>
+          <div class="market__coin">
+            <img src="/assets/icons/coins/DGD.png" />
+            <span class="market__coin-name">DGD / BTC</span>
+            <div class="market__coin-stat market__coin-stat--top">
+              <img src="/assets/icons/ArrowTop.svg" /> 5.76%
+            </div>
+            <span class="market__coin-value">₹ 284.64</span>
+            <img src="/assets/icons/coins/graph/DGD.png" />
+          </div>
+          <div class="market__coin">
+            <img src="/assets/icons/coins/ETHOS.png" />
+            <span class="market__coin-name">Ethos / BTC</span>
+            <div class="market__coin-stat">
+              <img src="/assets/icons/ArrowBottom.svg" /> 5.76%
+            </div>
+            <span class="market__coin-value">₹ 1,146,25.96</span>
+            <img src="/assets/icons/coins/graph/ETHOS.png" />
+          </div>
+          <div class="market__coin">
+            <img src="/assets/icons/coins/KMD.png" />
+            <span class="market__coin-name">KMD / BTC</span>
+            <div class="market__coin-stat">
+              <img src="/assets/icons/ArrowBottom.svg" /> 5.76%
+            </div>
+            <span class="market__coin-value">₹ 245.21</span>
+            <img src="/assets/icons/coins/graph/KMD.png" />
+          </div>
+          <div class="market__coin">
+            <img src="/assets/icons/coins/ETP.png" />
+            <span class="market__coin-name">Etp / BTC</span>
+            <div class="market__coin-stat market__coin-stat--top">
+              <img src="/assets/icons/ArrowTop.svg" /> 5.76%
+            </div>
+            <span class="market__coin-value">₹ 420.83</span>
+            <img src="/assets/icons/coins/graph/ETP.png" />
+          </div>
+        </div>
+        <div class="market__coins" data-id="1">
+          <div class="market__coin">
+            <img src="/assets/icons/coins/BTC.png" />
+            <span class="market__coin-name">Bitcoin / BTC</span>
+            <div class="market__coin-stat market__coin-stat--top">
+              <img src="/assets/icons/ArrowTop.svg" /> 5.76%
+            </div>
+            <span class="market__coin-value">₹ 28,214,25.341</span>
+            <img src="/assets/icons/coins/graph/BTC.png" />
+          </div>
+          <div class="market__coin">
+            <img src="/assets/icons/coins/DGD.png" />
+            <span class="market__coin-name">DGD / BTC</span>
+            <div class="market__coin-stat market__coin-stat--top">
+              <img src="/assets/icons/ArrowTop.svg" /> 5.76%
+            </div>
+            <span class="market__coin-value">₹ 284.64</span>
+            <img src="/assets/icons/coins/graph/DGD.png" />
+          </div>
+          <div class="market__coin">
+            <img src="/assets/icons/coins/ETP.png" />
+            <span class="market__coin-name">Etp / BTC</span>
+            <div class="market__coin-stat market__coin-stat--top">
+              <img src="/assets/icons/ArrowTop.svg" /> 5.76%
+            </div>
+            <span class="market__coin-value">₹ 420.83</span>
+            <img src="/assets/icons/coins/graph/ETP.png" />
+          </div>
+          <div class="market__coin">
+            <img src="/assets/icons/coins/BTS.png" />
+            <span class="market__coin-name">BTS / BTC</span>
+            <div class="market__coin-stat">
+              <img src="/assets/icons/ArrowBottom.svg" /> 5.76%
+            </div>
+            <span class="market__coin-value">₹ 2,541.12</span>
+            <img src="/assets/icons/coins/graph/BTS.png" />
+          </div>
 
+          <div class="market__coin">
+            <img src="/assets/icons/coins/ETHOS.png" />
+            <span class="market__coin-name">Ethos / BTC</span>
+            <div class="market__coin-stat">
+              <img src="/assets/icons/ArrowBottom.svg" /> 5.76%
+            </div>
+            <span class="market__coin-value">₹ 1,146,25.96</span>
+            <img src="/assets/icons/coins/graph/ETHOS.png" />
+          </div>
+          <div class="market__coin">
+            <img src="/assets/icons/coins/KMD.png" />
+            <span class="market__coin-name">KMD / BTC</span>
+            <div class="market__coin-stat">
+              <img src="/assets/icons/ArrowBottom.svg" /> 5.76%
+            </div>
+            <span class="market__coin-value">₹ 245.21</span>
+            <img src="/assets/icons/coins/graph/KMD.png" />
+          </div>
+        </div>
+        <div class="market__coins" data-id="2">
+          <div class="market__coin">
+            <img src="/assets/icons/coins/BTS.png" />
+            <span class="market__coin-name">BTS / BTC</span>
+            <div class="market__coin-stat">
+              <img src="/assets/icons/ArrowBottom.svg" /> 5.76%
+            </div>
+            <span class="market__coin-value">₹ 2,541.12</span>
+            <img src="/assets/icons/coins/graph/BTS.png" />
+          </div>
+          <div class="market__coin">
+            <img src="/assets/icons/coins/ETHOS.png" />
+            <span class="market__coin-name">Ethos / BTC</span>
+            <div class="market__coin-stat">
+              <img src="/assets/icons/ArrowBottom.svg" /> 5.76%
+            </div>
+            <span class="market__coin-value">₹ 1,146,25.96</span>
+            <img src="/assets/icons/coins/graph/ETHOS.png" />
+          </div>
+          <div class="market__coin">
+            <img src="/assets/icons/coins/KMD.png" />
+            <span class="market__coin-name">KMD / BTC</span>
+            <div class="market__coin-stat">
+              <img src="/assets/icons/ArrowBottom.svg" /> 5.76%
+            </div>
+            <span class="market__coin-value">₹ 245.21</span>
+            <img src="/assets/icons/coins/graph/KMD.png" />
+          </div>
+          <div class="market__coin">
+            <img src="/assets/icons/coins/BTC.png" />
+            <span class="market__coin-name">Bitcoin / BTC</span>
+            <div class="market__coin-stat market__coin-stat--top">
+              <img src="/assets/icons/ArrowTop.svg" /> 5.76%
+            </div>
+            <span class="market__coin-value">₹ 28,214,25.341</span>
+            <img src="/assets/icons/coins/graph/BTC.png" />
+          </div>
+
+          <div class="market__coin">
+            <img src="/assets/icons/coins/DGD.png" />
+            <span class="market__coin-name">DGD / BTC</span>
+            <div class="market__coin-stat market__coin-stat--top">
+              <img src="/assets/icons/ArrowTop.svg" /> 5.76%
+            </div>
+            <span class="market__coin-value">₹ 284.64</span>
+            <img src="/assets/icons/coins/graph/DGD.png" />
+          </div>
+
+          <div class="market__coin">
+            <img src="/assets/icons/coins/ETP.png" />
+            <span class="market__coin-name">Etp / BTC</span>
+            <div class="market__coin-stat market__coin-stat--top">
+              <img src="/assets/icons/ArrowTop.svg" /> 5.76%
+            </div>
+            <span class="market__coin-value">₹ 420.83</span>
+            <img src="/assets/icons/coins/graph/ETP.png" />
+          </div>
+        </div>
+        <button class="market__button">See All Market</button>
+      </div>
       <div class="reviews">
         <div class="reviews__container">
           <div class="reviews__text">
@@ -565,5 +820,9 @@
 
     <!-- Аккордион -->
     <script src="assets/js/accordion.js"></script>
+    <!-- Модальное окно -->
+    <script src="assets/js/modal.js"></script>
+    <!-- Табы -->
+    <script src="assets/js/tabs.js"></script>
   </body>
 </html>
