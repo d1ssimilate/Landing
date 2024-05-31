@@ -1,5 +1,6 @@
 @import "reset";
 @import "variables";
+@import "components/header.scss";
 
 * {
   font-family: "Open Sans", sans-serif;
@@ -13,7 +14,7 @@
   gap: 120px;
   background: var(--bg);
   height: 100%;
-  padding: 20px 0;
+  padding: 20px 20px;
 }
 
 .container {

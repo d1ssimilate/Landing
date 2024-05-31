@@ -163,6 +163,23 @@ input::-webkit-inner-spin-button {
   --extra: #ffba3a;
   --extra-light: #fff6d7;
   --bg: #141618;
+  --dark-blue: #1e1f25;
+}
+
+.header {
+  background: var(--dark-blue);
+}
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  padding-right: 40px;
+  height: fit-content;
+  border-right: 2px solid var(--grey-6);
 }
 
 * {
@@ -177,10 +194,10 @@ input::-webkit-inner-spin-button {
   gap: 120px;
   background: var(--bg);
   height: 100%;
-  padding: 20px 0;
+  padding: 20px 20px;
 }
 
-.container {
+.container, .header__content {
   max-width: 1590px;
   width: 100%;
   margin: 0 auto;
