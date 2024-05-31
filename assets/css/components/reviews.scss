@@ -31,13 +31,19 @@
     flex-direction: column;
     gap: 60px;
 
-    padding: 90px 0;
+    padding-top: 90px !important;
+    padding-bottom: 90px !important;
   }
 
   &__text {
     display: flex;
     align-items: center;
     gap: 120px;
+
+    @media (max-width: $medium) {
+      flex-direction: column;
+      gap: 70px;
+    }
 
     &-title {
       font-size: 58px;
@@ -70,6 +76,11 @@
       display: flex;
       align-items: center;
       gap: 20px;
+
+      @media (max-width: $medium) {
+        flex-direction: column;
+        text-align: center;
+      }
     }
 
     &-text {
@@ -94,6 +105,18 @@
     &-desc {
       font-size: 24px;
       line-height: 36px;
+
+      @media (max-width: $medium) {
+        font-size: 18px;
+        text-align: center;
+      }
+    }
+    &-icon {
+      display: block;
+
+      @media (max-width: $medium) {
+        display: none;
+      }
     }
   }
 
