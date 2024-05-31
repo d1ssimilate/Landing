@@ -1,5 +1,8 @@
 .header {
   background: var(--dark-blue);
+  height: 120px;
+  display: flex;
+  align-items: center;
   &__content {
     @extend .container;
     display: flex;
@@ -9,6 +12,28 @@
   &__logo {
     display: flex;
     align-items: center;
-    gap: 40px;
+    padding-right: 40px;
+    height: fit-content;
+    border-right: 1px solid var(--grey-6);
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    &-item {
+      display: flex;
+      align-items: center;
+      padding: 8px 18px;
+      gap: 12px;
+      color: var(--grey-6);
+      cursor: pointer;
+      span {
+        font-weight: 500;
+        color: currentColor;
+      }
+    }
+  }
+  &__logIn {
+    @extend .button;
   }
 }

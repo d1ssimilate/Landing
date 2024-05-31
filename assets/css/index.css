@@ -168,6 +168,9 @@ input::-webkit-inner-spin-button {
 
 .header {
   background: var(--dark-blue);
+  height: 120px;
+  display: flex;
+  align-items: center;
 }
 .header__content {
   display: flex;
@@ -179,9 +182,25 @@ input::-webkit-inner-spin-button {
   align-items: center;
   padding-right: 40px;
   height: fit-content;
-  border-right: 2px solid var(--grey-6);
+  border-right: 1px solid var(--grey-6);
 }
-
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.header__nav-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 18px;
+  gap: 12px;
+  color: var(--grey-6);
+  cursor: pointer;
+}
+.header__nav-item span {
+  font-weight: 500;
+  color: currentColor;
+}
 * {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
@@ -201,4 +220,13 @@ input::-webkit-inner-spin-button {
   max-width: 1590px;
   width: 100%;
   margin: 0 auto;
+}
+
+.button, .header__logIn {
+  height: 56px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
