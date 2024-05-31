@@ -19,10 +19,14 @@
   background: var(--bg);
   padding: 20px 20px;
   min-height: 100dvh;
+  @media screen and (max-width: $small) {
+    padding: unset;
+  }
 }
 
 .container {
-  max-width: 1590px;
+  max-width: 1610px;
+  padding: 0 20px;
   width: 100%;
   margin: 0 auto;
 }
@@ -81,6 +85,8 @@ hr {
   z-index: 999;
   &__inner {
     padding: 0 15px;
+    max-width: 580px;
+    width: 100%;
 
     max-height: 90%;
     overflow-y: auto;
@@ -94,12 +100,15 @@ hr {
     background: var(--bg);
     border: 1px solid var(--grey-6);
     border-radius: 6px;
-    min-width: 580px;
+
     padding: 50px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 60px;
+    @media (max-width: $medium) {
+      padding: 50px 20px;
+    }
   }
   &__actions {
     display: flex;
@@ -115,10 +124,16 @@ hr {
   &__register {
     margin-top: 10px;
     color: var(--grey-6);
-    * {
-      font-size: 16px;
+    font-size: 16px;
+    @media (max-width: $medium) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
     }
+
     span {
+      font-size: 16px;
       font-weight: 600;
     }
   }

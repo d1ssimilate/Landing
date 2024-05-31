@@ -3,6 +3,13 @@
   height: 120px;
   display: flex;
   align-items: center;
+  @media screen and (max-width: $medium) {
+    height: 78px;
+  }
+  @media screen and (max-width: $small) {
+    border-radius: 0 0 10px 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
   &__content {
     @extend .container;
     display: flex;
@@ -10,6 +17,18 @@
     align-items: center;
   }
   &__logo {
+    @media screen and (max-width: $large) {
+      gap: 15px;
+    }
+    @media screen and (max-width: $medium) {
+      img {
+        width: 91px;
+        object-fit: cover;
+        height: 15px;
+      }
+      padding-right: unset;
+      border: unset;
+    }
     display: flex;
     align-items: center;
     padding-right: 40px;
@@ -19,21 +38,45 @@
   &__nav {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 3vw;
+    @media screen and (max-width: $medium) {
+      display: none;
+    }
     &-item {
       display: flex;
       align-items: center;
-      padding: 8px 18px;
       gap: 12px;
       color: var(--grey-6);
+
       cursor: pointer;
       span {
         font-weight: 500;
         color: currentColor;
+        @media screen and (max-width: $large) {
+          font-size: 16px;
+        }
       }
     }
   }
+  &__menuIcon {
+    display: none;
+    @media screen and (max-width: $medium) {
+      display: block;
+      margin-top: 6px;
+    }
+  }
+  &__end {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
   &__logIn {
     @extend .button;
+    @media screen and (max-width: $large) {
+      font-size: 16px;
+    }
+    @media screen and (max-width: $medium) {
+      height: unset !important;
+    }
   }
 }
