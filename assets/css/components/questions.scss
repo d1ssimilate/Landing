@@ -1,0 +1,47 @@
+.questions {
+  @extend .container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  &__subtitle {
+    color: var(--grey-6);
+  }
+  .accordion {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    z-index: 1;
+    &-header {
+      cursor: pointer;
+      padding: 15px 20px;
+      background-color: white;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 18px;
+    }
+    &-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: min-height 0.3s ease-out, padding 0.3s ease-out;
+      background: black;
+      color: white;
+      border-radius: 0 0 12px 12px;
+      font-size: 18px;
+    }
+    &-open {
+      .accordion-header {
+        border-radius: 12px 12px 0 0;
+      }
+      .accordion-content {
+        padding: 15px 20px;
+      }
+    }
+  }
+}
