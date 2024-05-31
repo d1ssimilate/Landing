@@ -1,0 +1,71 @@
+.market {
+  @extend .container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+
+  &__head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__coins {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    overflow-x: auto;
+  }
+  &__coin {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 28px;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid var(--dark-blue);
+    * {
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    &-name {
+      font-size: 20px;
+    }
+    &-stat {
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--error);
+      &--top {
+        color: var(--success);
+      }
+    }
+    &-value {
+      font-size: 24px;
+      font-weight: 600;
+    }
+  }
+  &__button {
+    @extend .button;
+    @extend .button--arrow;
+    background: var(--primary-9);
+    width: 240px;
+  }
+  &__separator {
+    width: 100%;
+    background: var(--dark-blue);
+    height: 1px;
+  }
+  &__tabs {
+    display: flex;
+    gap: 30px;
+    &-item {
+      line-height: 32px;
+      color: var(--grey-6);
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+}
