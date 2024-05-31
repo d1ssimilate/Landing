@@ -38,7 +38,27 @@
           </ul>
           <div class="header__end">
             <button class="header__logIn" id="loginBtn">Log In</button>
-            <img class="header__menuIcon" src="/assets/icons/Menu.svg" alt="" />
+
+            <div class="burger-menu">
+              <img
+                class="header__menuIcon"
+                src="/assets/icons/Menu.svg"
+                id="burgerIcon"
+              />
+              <ul class="menu" id="menu">
+                <li class="header__nav-item">
+                  <span>Market</span><img src="/assets/img/arrow.svg" alt="" />
+                </li>
+                <li class="header__nav-item">
+                  <span>Trade</span><img src="/assets/img/arrow.svg" alt="" />
+                </li>
+                <li class="header__nav-item">
+                  <span>Earn</span><img src="/assets/img/arrow.svg" alt="" />
+                </li>
+                <li class="header__nav-item"><span>About</span></li>
+                <li class="header__nav-item"><span>Career</span></li>
+              </ul>
+            </div>
           </div>
         </div>
       </header>
@@ -832,5 +852,7 @@
     <script src="assets/js/modal.js"></script>
     <!-- Табы -->
     <script src="assets/js/tabs.js"></script>
+    <!-- Бургер меню -->
+    <script src="assets/js/burger.js"></script>
   </body>
 </html>
