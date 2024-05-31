@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/index.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -18,21 +18,84 @@
               <span>Market</span><img src="/assets/img/arrow.svg" alt="" />
             </li>
             <li class="header__nav-item">
-              <span>Market</span><img src="/assets/img/arrow.svg" alt="" />
+              <span>Trade</span><img src="/assets/img/arrow.svg" alt="" />
             </li>
             <li class="header__nav-item">
-              <span>Market</span><img src="/assets/img/arrow.svg" alt="" />
+              <span>Earn</span><img src="/assets/img/arrow.svg" alt="" />
             </li>
             <li class="header__nav-item">
-              <span>Market</span><img src="/assets/img/arrow.svg" alt="" />
+              <span>About</span>
             </li>
             <li class="header__nav-item">
-              <span>Market</span><img src="/assets/img/arrow.svg" alt="" />
+              <span>Career</span>
             </li>
           </ul>
-          <button class="header__logIn">Log In</button>
+          <button class="header__logIn" id="loginBtn">Log In</button>
         </div>
       </header>
+      <div id="myModal" class="modal">
+        <div class="modal__inner">
+          <div class="modal__content">
+            <p class="modal__title">Login</p>
+            <form class="modal__form">
+              <div class="modal__input">
+                <label for="email">Email or Phone</label>
+                <input placeholder="Type Here" name="email" type="text" />
+              </div>
+              <div class="modal__input">
+                <label for="password">Password</label>
+                <input
+                  placeholder="Type Here"
+                  name="password"
+                  type="password"
+                  id="password"
+                />
+                <img
+                  id="eye"
+                  class="modal__input-show"
+                  src="/assets/icons/CloseEye.svg"
+                  alt="show"
+                />
+              </div>
+              <div class="modal__actions">
+                <button type="submit">Login</button>
+                <span>Forgot Password?</span>
+              </div>
+              <p class="modal__register">
+                Don’t Have an Account?<span> Sign Up Here</span>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
+<script>
+  var modal = document.getElementById("myModal");
+  var btn = document.getElementById("loginBtn");
+  var input = document.getElementById("password");
+  var eye = document.getElementById("eye");
+
+  input.classList.add("modal__input--hidden");
+
+  btn.onclick = function () {
+    modal.style.display = "flex";
+  };
+
+  eye.onclick = function () {
+    if (input.type === "password") {
+      input.type = "text";
+      eye.src = "/assets/icons/Eye.svg";
+    } else {
+      input.type = "password";
+      eye.src = "/assets/icons/CloseEye.svg";
+    }
+  };
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+</script>
