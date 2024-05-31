@@ -1019,7 +1019,6 @@ input::-webkit-inner-spin-button {
 h2 {
   font-size: 58px;
   font-weight: bold;
-  text-align: center;
 }
 @media screen and (max-width: 1024px) {
   h2 {
