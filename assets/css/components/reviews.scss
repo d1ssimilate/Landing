@@ -1,0 +1,127 @@
+.reviews {
+  overflow: hidden;
+
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+
+  background: var(--dark-blue);
+
+  &::before {
+    content: "";
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-image: url("../../../assets/img/bg-noise.png");
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__container {
+    @extend .container;
+
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    padding: 90px 0;
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    gap: 120px;
+
+    &-title {
+      font-size: 58px;
+      font-weight: 700;
+      line-height: 72px;
+      color: var(--white);
+    }
+
+    &-desc {
+      font-size: 18px;
+      line-height: 28px;
+      color: var(--grey-6);
+    }
+  }
+
+  &__card {
+    padding: 40px 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    background: #272a34;
+
+    border-radius: 10px;
+
+    &-user {
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    &-text {
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    &-name {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 32px;
+    }
+
+    &-location {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &-desc {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+
+  &__slider {
+    position: relative;
+
+    &-pagination {
+      bottom: -50px !important;
+
+      & > .swiper-pagination-bullet {
+        width: 40px;
+        height: 4px;
+
+        background: white;
+        opacity: 0.2;
+
+        border-radius: 0;
+      }
+
+      & > .swiper-pagination-bullet-active {
+        width: 40px;
+        height: 4px;
+
+        background: var(--grey-4);
+        opacity: 1;
+
+        border-radius: 0;
+      }
+    }
+  }
+}

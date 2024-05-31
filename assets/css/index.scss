@@ -5,6 +5,7 @@
 @import "components/footer";
 @import "components/banner";
 @import "components/questions";
+@import "components/reviews";
 
 * {
   font-family: "Open Sans", sans-serif;
@@ -12,15 +13,14 @@
   color: white;
 }
 
-.wrapper {
+.page-container {
   display: flex;
   flex-direction: column;
   gap: 120px;
   background: var(--bg);
-  padding: 20px 20px;
-  min-height: 100dvh;
-  @media screen and (max-width: $small) {
-    padding: unset;
+
+  @media (max-width: $large) {
+    padding: 20px 20px;
   }
 }
 
