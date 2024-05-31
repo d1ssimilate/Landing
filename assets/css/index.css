@@ -496,8 +496,8 @@ input::-webkit-inner-spin-button {
   flex-direction: column;
   gap: 120px;
   background: var(--bg);
-  height: 100%;
   padding: 20px 20px;
+  min-height: 100dvh;
 }
 
 .container, .header__content, .market, .questions {
