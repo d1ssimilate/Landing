@@ -1,1 +1,21 @@
 @import "reset";
+@import "variables";
+
+* {
+  color: white;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  background: var(--bg);
+  height: 100%;
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 1590px;
+  width: 100%;
+  margin: 0 auto;
+}

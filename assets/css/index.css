@@ -133,3 +133,52 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
+
+:root {
+  --grey-1: #f9f9fa;
+  --grey-2: #eceef0;
+  --grey-3: #dee1e5;
+  --grey-4: #cfd3da;
+  --grey-5: #bfc4cd;
+  --grey-6: #adb3bf;
+  --grey-7: #98a0af;
+  --grey-8: #808a9a;
+  --grey-9: #7e8184;
+  --grey-10: #54576d;
+  --primary: #f7faff;
+  --primary-2: #f2f7ff;
+  --primary-3: #d1e2fd;
+  --primary-4: #bcd4fb;
+  --primary-5: #a5c5fa;
+  --primary-6: #8ab4f9;
+  --primary-7: #6aa0f7;
+  --primary-8: #4287f5;
+  --primary-9: #1b70f1;
+  --primary-10: #1151b6;
+  --success: #06b470;
+  --success-light: #f1fcd3;
+  --error: #f74e2c;
+  --error-light: #ffe8d5;
+  --extra: #ffba3a;
+  --extra-light: #fff6d7;
+  --bg: #141618;
+}
+
+* {
+  color: white;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  background: var(--bg);
+  height: 100%;
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 1590px;
+  width: 100%;
+  margin: 0 auto;
+}

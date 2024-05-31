@@ -9,7 +9,6 @@
   --grey-8: #808a9a;
   --grey-9: #7e8184;
   --grey-10: #54576d;
-
   --primary: #f7faff;
   --primary-2: #f2f7ff;
   --primary-3: #d1e2fd;
@@ -20,18 +19,11 @@
   --primary-8: #4287f5;
   --primary-9: #1b70f1;
   --primary-10: #1151b6;
-
   --success: #06b470;
   --success-light: #f1fcd3;
   --error: #f74e2c;
   --error-light: #ffe8d5;
   --extra: #ffba3a;
   --extra-light: #fff6d7;
-
   --bg: #141618;
 }
-
-$x-large: 1440px;
-$large: 1024px;
-$medium: 768px;
-$small: 375px;
