@@ -5,10 +5,9 @@ class Footer extends HTMLElement {
 
   render() {
     this.innerHTML = `
-        <footer class="footer">
-            <div class="footer__container">
-                <div class="footer__logo">
-                <img src="/assets/img/logo.png" />
+        <div class="footer__container">
+            <div class="footer__logo">
+                <img src="/assets/img/LogoFooter.png" />
 
                 <div class="footer__community">
                     <span>Community-</span>
@@ -34,11 +33,11 @@ class Footer extends HTMLElement {
                     class="footer__community-icon"
                     />
                 </div>
-                </div>
+            </div>
 
-                <hr class="footer__line" />
+            <hr class="footer__line" />
 
-                <ul class="footer__links">
+            <ul class="footer__links">
                 <li class="footer__links-item">
                     <h2 class="footer__links-title">Crypto Brains</h2>
 
@@ -88,11 +87,11 @@ class Footer extends HTMLElement {
                     <a class="footer__links-link">News</a>
                     <a class="footer__links-link">Events</a>
                 </li>
-                </ul>
+            </ul>
 
-                <hr class="footer__line" />
+            <hr class="footer__line" />
 
-                <div class="footer__bottom">
+            <div class="footer__bottom">
                 <div class="footer__bottom-copyright">
                     <span>©Copyright 2022 All Rights Are Reserved.</span>
                     <i></i>
@@ -103,20 +102,19 @@ class Footer extends HTMLElement {
 
                 <div class="footer__bottom-langs">
                     <div class="footer__bottom-input">
-                    <span>English</span>
+                        <span>English</span>
 
-                    <img src="assets/img/arrow.svg" />
+                        <img src="assets/img/arrow.svg" />
                     </div>
 
                     <div class="footer__bottom-input">
-                    <span>INR</span>
+                        <span>INR</span>
 
-                    <img src="assets/img/arrow.svg" />
+                        <img src="assets/img/arrow.svg" />
                     </div>
                 </div>
-                </div>
             </div>
-        </footer>
+        </div>
       `;
   }
 }
