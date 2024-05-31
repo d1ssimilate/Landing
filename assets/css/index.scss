@@ -56,6 +56,10 @@
   background: transparent;
   width: 240px;
   border: 1px solid white;
+  @media screen and (max-width: $small) {
+    background: white;
+    color: var(--primary-9);
+  }
 }
 
 h2 {

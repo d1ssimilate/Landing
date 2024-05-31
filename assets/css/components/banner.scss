@@ -10,6 +10,10 @@
   gap: 165px;
   position: relative;
 
+  @media (max-width: $medium) {
+    gap: 40px;
+  }
+
   &::before {
     content: "";
 
@@ -23,12 +27,31 @@
     background-image: url("../../../assets/img/banner_bg-noise.png");
     background-position: center;
     background-size: cover;
+    z-index: 0;
   }
 
   &__content {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    position: relative;
+
+    @media screen and (max-width: $medium) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    img {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 752px;
+      aspect-ratio: 1;
+      object-fit: cover;
+      z-index: 0;
+      @media screen and (max-width: $medium) {
+        position: unset;
+        width: 100%;
+      }
+    }
 
     &-text {
       max-width: 981px;
@@ -37,6 +60,10 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
+      z-index: 1;
+      @media screen and (max-width: $medium) {
+        align-items: center;
+      }
     }
 
     &-buttons {
@@ -44,6 +71,16 @@
 
       display: flex;
       gap: 30px;
+      @media screen and (max-width: $medium) {
+        margin-top: 20px;
+        flex-direction: column;
+      }
+      @media screen and (max-width: $small) {
+        width: 100%;
+        button {
+          width: 100%;
+        }
+      }
     }
 
     &-tag {
@@ -55,6 +92,10 @@
       font-weight: 600;
       line-height: 36px;
       color: var(--primary-9);
+
+      @media screen and (max-width: $medium) {
+        font-size: 20px;
+      }
 
       &::before {
         content: "";
@@ -69,6 +110,10 @@
         border-radius: 2px;
 
         background-color: var(--primary-9);
+
+        @media screen and (max-width: $medium) {
+          width: 20px;
+        }
       }
     }
 
@@ -77,6 +122,11 @@
       font-weight: 700;
       line-height: 120.67px;
       letter-spacing: -1.5px;
+      @media screen and (max-width: $medium) {
+        text-align: center;
+        font-size: 42px;
+        line-height: unset;
+      }
     }
 
     &-desc {
@@ -85,6 +135,12 @@
       font-size: 20px;
       line-height: 32px;
       color: var(--grey-6);
+      @media screen and (max-width: $medium) {
+        text-align: center;
+      }
+      @media screen and (max-width: $small) {
+        font-size: 18px;
+      }
     }
 
     &-line {
@@ -102,16 +158,31 @@
       background-size: 16px 2px, 100% 2px;
 
       transform: translateX(80px);
+      @media screen and (max-width: $medium) {
+        margin: 0 auto;
+        transform: unset;
+      }
     }
   }
 
   &__market {
     display: flex;
     align-items: center;
+    overflow-x: auto;
+    z-index: 1;
 
+    @media screen and (max-width: $small) {
+      display: none;
+    }
+
+    * {
+      white-space: nowrap;
+    }
     &-item {
       width: 100%;
-      padding: 10px 20px;
+      &:not(:first-child) {
+        padding-left: 20px;
+      }
 
       display: flex;
       flex-direction: column;
