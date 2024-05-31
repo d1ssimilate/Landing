@@ -1,0 +1,32 @@
+@import "../index";
+
+.footer {
+  width: 100%;
+  padding: 120px 0 40px 0;
+
+  background: var(--dark-blue);
+
+  &__container {
+    @extend .container;
+  }
+
+  &__logo {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__community {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    & > span {
+      font-size: 20px;
+      line-height: 32px;
+
+      color: var(--grey-1);
+    }
+  }
+}
