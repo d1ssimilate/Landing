@@ -1,0 +1,35 @@
+.banner {
+  max-width: 1590px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 165px 0 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 165px;
+}
+.banner__content-tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+  color: var(--primary-9);
+}
+.banner__content-tag::before {
+  content: "";
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--primary-9);
+}
+.banner__content-line {
+  margin: 0 216px 0 149px;
+  width: 30%;
+  height: 2px;
+  background: linear-gradient(to right, transparent 50%, #141618 50%), linear-gradient(0.25turn, rgba(154, 195, 33, 0) 0%, rgba(154, 195, 33, 0.8) 50%, rgba(154, 195, 33, 0) 100%);
+  background-size: 16px 2px, 100% 2px;
+  transform: translateX(220px);
+}
