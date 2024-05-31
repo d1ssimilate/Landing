@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/index.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="questions">
+        <div class="questions__top">
+          <h2>Frequently Asked Questions</h2>
+          <p class="questions__subtitle">
+            When an unknown printer took a galley of type and scrambled it to
+            make a type specimen book.
+          </p>
+        </div>
+        <hr />
+        <div class="questions__accordions">
+          <div class="accordion">
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <span>
+                  What should I do if I enter the Google verification code
+                  incorrectly ?</span
+                >
+                <img
+                  class="accordion-button"
+                  src="/assets/icons/Cross.svg"
+                  alt=""
+                />
+              </div>
+              <div class="accordion-content">
+                When an unknown printer took a galley of type and scrambled it
+                to make a type specimen book. It has survived not only five
+                centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged.
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <span>
+                  What is the difference between Defi and Metaverse ?</span
+                >
+                <img
+                  class="accordion-button"
+                  src="/assets/icons/Cross.svg"
+                  alt=""
+                />
+              </div>
+              <div class="accordion-content">
+                When an unknown printer took a galley of type and scrambled it
+                to make a type specimen book. It has survived not only five
+                centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged.
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <span>
+                  What should I do if Google verification fails to bind ?</span
+                >
+                <img
+                  class="accordion-button"
+                  src="/assets/icons/Cross.svg"
+                  alt=""
+                />
+              </div>
+              <div class="accordion-content">
+                When an unknown printer took a galley of type and scrambled it
+                to make a type specimen book. It has survived not only five
+                centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged.
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <span> How to complete your KYC Verification ?</span>
+                <img
+                  class="accordion-button"
+                  src="/assets/icons/Cross.svg"
+                  alt=""
+                />
+              </div>
+              <div class="accordion-content">
+                When an unknown printer took a galley of type and scrambled it
+                to make a type specimen book. It has survived not only five
+                centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged.
+              </div>
+            </div>
+          </div>
+          <div class="accordion">
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <span> Can We Enter in Website Without Login or Sign Up ?</span>
+                <img
+                  class="accordion-button"
+                  src="/assets/icons/Cross.svg"
+                  alt=""
+                />
+              </div>
+              <div class="accordion-content">
+                When an unknown printer took a galley of type and scrambled it
+                to make a type specimen book. It has survived not only five
+                centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged.
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <span>
+                  What should I do if I lost the binded phone number ?</span
+                >
+                <img
+                  class="accordion-button"
+                  src="/assets/icons/Cross.svg"
+                  alt=""
+                />
+              </div>
+              <div class="accordion-content">
+                When an unknown printer took a galley of type and scrambled it
+                to make a type specimen book. It has survived not only five
+                centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged.
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <span> How to register an account on the web ?</span>
+                <img
+                  class="accordion-button"
+                  src="/assets/icons/Cross.svg"
+                  alt=""
+                />
+              </div>
+              <div class="accordion-content">
+                When an unknown printer took a galley of type and scrambled it
+                to make a type specimen book. It has survived not only five
+                centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged.
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <span> How we Change mobile number ?</span>
+                <img
+                  class="accordion-button"
+                  src="/assets/icons/Cross.svg"
+                  alt=""
+                />
+              </div>
+              <div class="accordion-content">
+                When an unknown printer took a galley of type and scrambled it
+                to make a type specimen book. It has survived not only five
+                centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const accordionItems = document.querySelectorAll(".accordion-item");
+
+    accordionItems.forEach((item) => {
+      const header = item.querySelector(".accordion-header");
+      const content = item.querySelector(".accordion-content");
+
+      header.addEventListener("click", () => {
+        item.classList.toggle("accordion-open");
+
+        if (item.classList.contains("accordion-open")) {
+          content.style.maxHeight = "100%";
+          content.style.minHeight = content.scrollHeight + "px";
+        } else {
+          content.style.maxHeight = "0";
+          content.style.minHeight = null;
+        }
+      });
+    });
+  });
+</script>
