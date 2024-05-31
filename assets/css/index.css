@@ -155,6 +155,7 @@ input::-webkit-inner-spin-button {
   --primary-7: #6aa0f7;
   --primary-8: #4287f5;
   --primary-9: #1b70f1;
+  --primary-9-alpha: #1b71f11f;
   --primary-10: #1151b6;
   --success: #06b470;
   --success-light: #f1fcd3;
@@ -201,6 +202,98 @@ input::-webkit-inner-spin-button {
   font-weight: 500;
   color: currentColor;
 }
+.footer {
+  width: 100%;
+  padding: 120px 0 40px 0;
+  background: var(--dark-blue);
+}
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.footer__logo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__community {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.footer__community > span {
+  font-size: 20px;
+  line-height: 32px;
+  color: var(--grey-1);
+}
+.footer__line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(0.25turn, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+}
+.footer__links {
+  display: flex;
+  gap: 30px;
+}
+.footer__links-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer__links-title {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  color: var(--grey-1);
+}
+.footer__links-link {
+  color: var(--grey-6);
+  font-size: 16px;
+  line-height: 24px;
+}
+.footer__links-link > span {
+  padding: 4px 8px;
+  border-radius: 2px;
+  background: var(--primary-9-alpha);
+  color: var(--primary-9);
+  font-size: 14px;
+}
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__bottom-copyright {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.footer__bottom-copyright > span {
+  font-size: 16px;
+  color: var(--grey-1);
+}
+.footer__bottom-copyright > i {
+  display: block;
+  width: 7px;
+  height: 7px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+.footer__bottom-langs {
+  display: flex;
+  gap: 30px;
+}
+.footer__bottom-input {
+  padding: 6px 14px;
+  display: flex;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1450980392);
+  border-radius: 4px;
+}
+
 * {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
@@ -216,7 +309,7 @@ input::-webkit-inner-spin-button {
   padding: 20px 20px;
 }
 
-.container, .header__content {
+.container, .header__content, .footer__container {
   max-width: 1590px;
   width: 100%;
   margin: 0 auto;
