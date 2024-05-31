@@ -54,6 +54,10 @@
 h2 {
   font-size: 58px;
   font-weight: bold;
+  white-space: nowrap;
+  @media screen and (max-width: $large) {
+    font-size: 42px;
+  }
 }
 .market__tabs-item--active {
   pointer-events: none;

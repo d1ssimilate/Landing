@@ -269,26 +269,46 @@ input::-webkit-inner-spin-button {
   align-items: center;
   gap: 60px;
 }
+@media screen and (max-width: 768px) {
+  .market {
+    gap: 40px;
+  }
+}
 .market__head {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
 }
+@media screen and (max-width: 768px) {
+  .market__head {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
 .market__coins {
   display: flex;
   justify-content: space-between;
-  gap: 30px;
+  gap: 13px;
+  width: 100%;
   overflow-x: auto;
 }
 .market__coin {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 40px 28px;
+  padding: 40px 0;
+  min-width: 240px;
   align-items: center;
   border-radius: 10px;
   border: 2px solid var(--dark-blue);
+}
+@media screen and (max-width: 768px) {
+  .market__coin {
+    padding: 20px 0;
+    background: var(--dark-blue);
+  }
 }
 .market__coin * {
   font-weight: 500;
@@ -315,6 +335,11 @@ input::-webkit-inner-spin-button {
   background: var(--primary-9);
   width: 240px;
 }
+@media screen and (max-width: 375px) {
+  .market__button {
+    width: 100%;
+  }
+}
 .market__separator {
   width: 100%;
   background: var(--dark-blue);
@@ -323,12 +348,21 @@ input::-webkit-inner-spin-button {
 .market__tabs {
   display: flex;
   gap: 30px;
+  overflow-x: auto;
+  width: 100%;
+  justify-content: flex-end;
+}
+@media screen and (max-width: 768px) {
+  .market__tabs {
+    justify-content: center;
+  }
 }
 .market__tabs-item {
   line-height: 32px;
   color: var(--grey-6);
   font-size: 20px;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .footer {
@@ -657,6 +691,12 @@ input::-webkit-inner-spin-button {
 h2 {
   font-size: 58px;
   font-weight: bold;
+  white-space: nowrap;
+}
+@media screen and (max-width: 1024px) {
+  h2 {
+    font-size: 42px;
+  }
 }
 
 .market__tabs-item--active {
