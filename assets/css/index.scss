@@ -1,7 +1,8 @@
 @import "reset";
 @import "variables";
-@import "components/header.scss";
-@import "components/footer.scss";
+@import "components/header";
+@import "components/footer";
+@import "components/banner";
 
 * {
   font-family: "Open Sans", sans-serif;
