@@ -4,19 +4,34 @@
   flex-direction: column;
   align-items: center;
   gap: 60px;
+  @media screen and (max-width: $medium) {
+    gap: 40px;
+  }
   &__top {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    @media screen and (max-width: $medium) {
+      gap: 20px;
+    }
   }
   &__subtitle {
     color: var(--grey-6);
+    word-break: break-word;
+    text-align: center;
+    @media screen and (max-width: $medium) {
+      font-size: 16px;
+    }
   }
   &__accordions {
     display: flex;
     gap: 30px;
     align-items: flex-start;
+    @media screen and (max-width: $medium) {
+      flex-direction: column;
+      gap: 20px;
+    }
   }
   .accordion {
     display: flex;
@@ -24,6 +39,9 @@
     gap: 30px;
     z-index: 1;
     width: 100%;
+    @media screen and (max-width: $medium) {
+      gap: 20px;
+    }
     &-item {
       border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 4px;
@@ -34,9 +52,14 @@
       padding: 20px;
       font-weight: 600;
       span {
+        display: flex;
         font-size: 21px;
         font-weight: 600;
         padding-right: 24px;
+        word-break: break-word;
+        @media screen and (max-width: $large) {
+          font-size: 18px;
+        }
       }
     }
     &-button {

@@ -280,6 +280,9 @@ input::-webkit-inner-spin-button {
   justify-content: space-between;
   width: 100%;
 }
+.market__head h2 {
+  white-space: nowrap;
+}
 @media screen and (max-width: 768px) {
   .market__head {
     flex-direction: column;
@@ -590,19 +593,42 @@ input::-webkit-inner-spin-button {
   align-items: center;
   gap: 60px;
 }
+@media screen and (max-width: 768px) {
+  .questions {
+    gap: 40px;
+  }
+}
 .questions__top {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
 }
+@media screen and (max-width: 768px) {
+  .questions__top {
+    gap: 20px;
+  }
+}
 .questions__subtitle {
   color: var(--grey-6);
+  word-break: break-word;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .questions__subtitle {
+    font-size: 16px;
+  }
 }
 .questions__accordions {
   display: flex;
   gap: 30px;
   align-items: flex-start;
+}
+@media screen and (max-width: 768px) {
+  .questions__accordions {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 .questions .accordion {
   display: flex;
@@ -610,6 +636,11 @@ input::-webkit-inner-spin-button {
   gap: 30px;
   z-index: 1;
   width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .questions .accordion {
+    gap: 20px;
+  }
 }
 .questions .accordion-item {
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -622,9 +653,16 @@ input::-webkit-inner-spin-button {
   font-weight: 600;
 }
 .questions .accordion-header span {
+  display: flex;
   font-size: 21px;
   font-weight: 600;
   padding-right: 24px;
+  word-break: break-word;
+}
+@media screen and (max-width: 1024px) {
+  .questions .accordion-header span {
+    font-size: 18px;
+  }
 }
 .questions .accordion-button {
   position: absolute;
@@ -660,11 +698,22 @@ input::-webkit-inner-spin-button {
   padding: 20px 20px;
   min-height: 100dvh;
 }
+@media screen and (max-width: 375px) {
+  .wrapper {
+    padding: unset;
+  }
+}
 
 .container, .header__content, .market, .footer__container, .banner, .questions {
-  max-width: 1590px;
+  max-width: 1610px;
+  padding: 0 20px;
   width: 100%;
   margin: 0 auto;
+}
+@media screen and (max-width: 375px) {
+  .container, .header__content, .market, .footer__container, .banner, .questions {
+    padding: 0 16px;
+  }
 }
 
 .button, .modal__form button, .button--transparent, .header__logIn, .market__button {
@@ -691,7 +740,7 @@ input::-webkit-inner-spin-button {
 h2 {
   font-size: 58px;
   font-weight: bold;
-  white-space: nowrap;
+  text-align: center;
 }
 @media screen and (max-width: 1024px) {
   h2 {

@@ -19,12 +19,19 @@
   background: var(--bg);
   padding: 20px 20px;
   min-height: 100dvh;
+  @media screen and (max-width: $small) {
+    padding: unset;
+  }
 }
 
 .container {
-  max-width: 1590px;
+  max-width: 1610px;
+  padding: 0 20px;
   width: 100%;
   margin: 0 auto;
+  @media screen and (max-width: $small) {
+    padding: 0 16px;
+  }
 }
 
 .button {
@@ -54,7 +61,7 @@
 h2 {
   font-size: 58px;
   font-weight: bold;
-  white-space: nowrap;
+  text-align: center;
   @media screen and (max-width: $large) {
     font-size: 42px;
   }
